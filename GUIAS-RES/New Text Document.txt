@@ -1,0 +1,30 @@
+1. Pensar y responder las siguientes preguntas.
+
+1.1 ¿Cual es el objetivo de realizar testing de un software?
+1.2 ¿Realizar testing sobre un software nos demuestra que el software funciona correctamente? Justificar.
+1.3 ¿En que consiste el testing de caja negra?. ¿Cual es su principal caracterıstica?
+1.4 ¿Se puede realizar testing de caja negra sin contar con una especificacion del programa a testear? Justificar. 
+
+
+
+
+2. Pensando en el test de caja negra utilizando el metodo de particion por categorıas de un programa que, dados
+tres enteros que se interpretan como la longitud de cada uno de los lados de un triangulo, dice si el tri´angulo resultante es
+isosceles, escaleno o equilatero. Tener en cuenta que para que un triangulo sea factible, la suma de dos de sus lados debe ser
+mayor a la longitud del tercer lado.
+
+2.1 Indicar cu´ales son los Factores del programa.
+2.2 ¿Existen Factores que son relaciones entre otros Factores? ¿Cu´ales?
+2.3 Pensar caracter´ısticas relevantes (Categor´ıas) para cada uno de los factores encontrados.
+2.4 Determinar Elecciones (Choices) para cada Categor´ıa de cada Factor.
+2.5 Clasificar las Elecciones: errores, ´unicos, restricciones, etc
+2.6 Armar los casos de prueba, combinando las distintas Elecciones determinadas para cada Categor´ıa detallando el resultado esperado en cada caso.
+
+
+
+
+
+
+
+
+

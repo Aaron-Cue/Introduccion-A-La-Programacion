@@ -1,0 +1,128 @@
+
+------ ejemplos de tipos para los test -----
+
+red social ([Usuarios], [Relaciones], [Publicaciones])    ([Usuario], [(Usuario, Usuario)], [(Usuario, String, [Usuarios])])
+
+ej:  ([(343, "Aaron Cuellar"), (343, "Roberto Carlos"), (670, "Cuti Romero"), (176, "Don Omar")] ,[((343, "Aaron Cuellar"), (670, "Cuti Romero")),((237, "Luis Suarez"), (176, "Don Omar"))] ,[((343, "Aaron Cuellar"), "ip > algebra", [(670, "Cuti Romero"), (237, "Luis Suarez"), (176, "Don Omar")]), ((176, "Don Omar"), "Don Omar > Daddy Yankee", [(343, "Aaron Cuellar"), (237, "Luis Suarez")])])
+
+
+
+usuario (Integer, String)                   lista usuarios  [(Integer, String), (Integer, String), (Integer, String)]
+
+ej:   (928, "Pepito")                       [(100, "Ferxxo"), (2, "Mora"), (90, "Quevedo")]
+
+
+
+publicacion (Usuario, String, [Usuarios])
+ej:  ((434, "nicki nicole"), "ft con los q dan like", [(23, "myke Towers"), (90, "Quevedo"), (100, "Ferxxo")])
+
+lista de publicaciones
+ej:  [((434, "nicki nicole"), "ft con los q dan like", [(23, "myke Towers"), (90, "Quevedo"), (100, "Ferxxo")]), ((2, "Mora"), "1 oct en movi arena", [(90, "Quevedo"), (100, "Ferxxo")])]
+
+
+
+
+relacion (Usuario, Usuario)                    lista relacion  [(usuario, usuario), (usuario, usuario)]
+
+ej:  ((100, "Ferxxo"), (2, "Mora"))            ej: [((2, "Mora"), (100, "Ferxxo")), ((100, "Ferxxo"), (2, "Mora")), ((90, "Quevedo"), (23, "myke Towers"))]
+
+
+
+
+----------- TEST -------------
+
+--HUnit--
+”Nombre del test” ˜: <res obtenido> ˜?= <res esperado>
+
+res obtenido: es el valor que devuelve la funcion que queremos
+testear, osea evaluamos la funcion
+res esperado: es el valor que deberia devolver la funcion que
+queremos testear, osea es el valor que tiene que devolver
+
+Ejemplos:
+”doble” ˜: (doble 4) ˜?= 8
+”Maximo repetido” ˜: (maximo [2, 7, 3, 7, 4]) ˜?= 7
+”esPar impar” ˜ : (esPar 5) ˜?= False
+
+
+
+--------COMO TESTEAR----------
+1. Crear modulos 
+ 1.1 crear modulo donde esten las funciones a testear
+module name where                 * name debe coincidir con el nombre del archivo
+
+funciones a testear....
+
+
+
+ 1.2 crear modulo para ejecutar los tests
+ module name where                * name debe coincidir con el nombre del archivo 
+
+run = runTestTT tests
+
+tests = test [
+    "nombre representativo" ~: doble 3 ~?= 6,
+    "nombre representativo" ~: doble 2 ~?= 4
+             ]
+
+
+2. cargar el archivo de los tests
+3. ejecutar la funcion run: ghci> run
+
+--------------------------------------------------------
+
+"fibonacci de 4" ˜: (fib n) ˜?= 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Un error se refiere a un problema en el código que hace que el programa no se comporte como se espera. Esto puede incluir errores de sintaxis (como un paréntesis faltante), errores semánticos (como un operador utilizado incorrectamente) o problemas de lógica (como un bucle infinito).
+
+Por otro lado, un fallo se refiere a una situación en la que el programa se detiene o produce un resultado incorrecto debido a un error. Esto puede incluir errores de tiempo de ejecución (como una división por cero) o problemas de lógica que hacen que el programa produzca resultados incorrectos.
+
+En resumen, un error es el problema subyacente que causa el fallo, mientras que el fallo es el resultado observable del error. Cuando se depura un programa, el objetivo es identificar y corregir los errores para evitar fallos y producir un comportamiento correcto y deseado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
